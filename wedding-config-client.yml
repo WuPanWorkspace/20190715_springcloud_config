@@ -1,0 +1,23 @@
+﻿spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8201
+spring:
+  profile: dev
+  application:
+    name: wedding-config-client
+eureka:
+  client:
+    service-url: defaultZone: http://localhost:87711/eureka/
+---
+server:
+  port: 8202
+spring:
+  profile: test
+  application:
+    name: wedding-config-client
+eureka:
+  client:
+    service-url: defaultZone: http://localhost:8772/eureka/
